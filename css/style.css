@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#drag-1 {
+  padding: 2rem;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/SourceCodePro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source Code Pro Semibold";
+  src: url("../fonts/SourceCodePro-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Source Code Pro Light";
+  src: url("../fonts/SourceCodePro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Source Code Pro Italic";
+  src: url("../fonts/SourceCodePro-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Font Awesome";
+  src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Source Code Pro Semibold";
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
