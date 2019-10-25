@@ -2,3 +2,56 @@
 @import './fonts';
 @import './nav';
 
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 3rem;
+}
+
+.schedule {
+    padding: 2rem;
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 2px;
+    }
+
+    &-day {
+        background-color: #eeeeee;
+        height: 10rem;
+    }
+}
+
+.toolbar {
+    background-color: #eeeeee;
+    text-align: center;
+
+    h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-family: 'Muli';
+        font-weight: 400;
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #494ca2;
+        color: white;
+        margin: 1rem;
+    }
+
+    &-dropdown {
+        width: 100%;
+        padding: 1rem 2rem;
+        background-color: #8186d5;
+        color: white;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+.icon {
+    font-family: "Font Awesome";
+    font-size: 1.2rem;
+}
