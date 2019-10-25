@@ -1,3 +1,4 @@
+@import './variables';
 @import './reset';
 @import './fonts';
 @import './nav';
@@ -18,7 +19,7 @@
     }
 
     &-day {
-        background-color: #eeeeee;
+        background-color: $lightgray;
         height: 10rem;
     }
 }
@@ -34,7 +35,7 @@
         font-weight: 400;
         display: inline-block;
         padding: 1rem 2rem;
-        background-color: #494ca2;
+        background-color: $main;
         color: white;
         margin: 1rem;
     }
@@ -42,7 +43,7 @@
     &-dropdown {
         width: 100%;
         padding: 1rem 2rem;
-        background-color: #8186d5;
+        background-color: $secondary;
         color: white;
     }
 
