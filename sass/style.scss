@@ -1,9 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat Regular";
-}
+@import './reset';
+@import './fonts';
+@import './nav';
 
 #drag-1 {
     padding: 2rem;
@@ -12,31 +9,6 @@
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
-}
-
-@font-face {
-    font-family: "Montserrat Light";
-    src: url('../fonts/Montserrat-Light.ttf');
-}
-
-@font-face {
-    font-family: "Montserrat Regular";
-    src: url('../fonts/Montserrat-Regular.ttf');
-}
-
-@font-face {
-    font-family: "Montserrat Semibold";
-    src: url('../fonts/Montserrat-SemiBold.ttf');
-}
-
-@font-face {
-    font-family: "Muli";
-    src: url('../fonts/Muli[wght].ttf');
-}
-
-@font-face {
-    font-family: "Font Awesome";
-    src: url('../fonts/Font\ Awesome\ 5\ Free-Solid-900.otf');
 }
 
 .container {
@@ -86,42 +58,6 @@
     background-color: #494ca2;
 }
 
-header {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    background-color: none;
-    transition: background-color 0.7s ease;
-    z-index: 10;
-
-    nav {
-        width: 100%;
-        padding: .5rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #333;
-
-        span {
-            font-family: "Muli";
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1.2rem;
-        }
-
-        ul {
-            list-style-type: none;
-        
-            li {
-                text-transform: uppercase;
-                font-family: "Montserrat Regular";
-                padding: 4px 8px;
-                border-radius: 2px;
-                cursor: pointer;
-            }
-        }
-    }
-}
 
 .bg {
     &-light {
