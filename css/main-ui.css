@@ -109,6 +109,10 @@ footer .footer-icons .footer-icon {
   margin-right: 4px;
 }
 
+.bg-dark {
+  background-color: #464646;
+}
+
 .main-content {
   display: -ms-grid;
   display: grid;
