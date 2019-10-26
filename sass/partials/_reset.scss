@@ -1,0 +1,15 @@
+// RESETTING AND NORMALIZING ELEMENTS
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato Regular";
+    letter-spacing: .5px;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}

@@ -1,0 +1,17 @@
+footer {
+    padding: 2rem 4rem;
+
+    p {
+        color: $lightgray;
+    }
+
+    .footer-icons {
+        margin-top: 1rem;
+
+        .footer-icon {
+            width: 30px;
+            height: auto;
+            margin-right: 4px;
+        }
+    }
+}

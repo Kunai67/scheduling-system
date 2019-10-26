@@ -7,6 +7,12 @@
   letter-spacing: .5px;
 }
 
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
 @font-face {
   font-family: "Montserrat Light";
   src: url("../fonts/Montserrat-Light.ttf");
@@ -85,6 +91,24 @@ header nav ul li {
   background-color: #494ca2;
 }
 
+footer {
+  padding: 2rem 4rem;
+}
+
+footer p {
+  color: #ece7fa;
+}
+
+footer .footer-icons {
+  margin-top: 1rem;
+}
+
+footer .footer-icons .footer-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 4px;
+}
+
 .main-content {
   display: -ms-grid;
   display: grid;
@@ -106,7 +130,7 @@ header nav ul li {
 }
 
 .schedule-day {
-  background-color: #eeeeee;
+  background-color: #ece7fa;
   height: 10rem;
 }
 

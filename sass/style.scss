@@ -1,12 +1,8 @@
-@import './reset';
-@import './fonts';
-@import './nav';
-
-html {
-    scroll-behavior: smooth;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-}
+@import './partials/variables';
+@import './partials/reset';
+@import './partials/fonts';
+@import './partials/nav';
+@import './partials/footer';
 
 .container {
     width: 100%;
@@ -24,13 +20,13 @@ html {
         z-index: 2;
 
         h1 {
-            color: #ece7fa;
+            color: $lightgray;
             font-size: 1.7rem;
             margin-bottom: 2rem;
         }
 
         p {
-            color: #ece7fa;
+            color: $lightgray;
         }
     }
 
@@ -48,7 +44,7 @@ html {
 .btn {
     margin-top: 2rem;
     text-decoration: none;
-    color: #aed581;
+    color: $green;
     background: none;
     outline: none;
     border: none;
@@ -63,7 +59,7 @@ html {
         background: none;
         outline: none;
         border: none;
-        color: #aed581;
+        color: $green;
         padding: 0 6px 6px 6px;
 
         &::before, &::after {
@@ -72,7 +68,7 @@ html {
             bottom: 0;
             height: 1px;
             width: 0;
-            background-color: #aed581;
+            background-color: $green;
             transition: width 0.7s ease;
         }
 
@@ -90,12 +86,12 @@ html {
     }
 
     &-border {
-        border: 1px solid #aed581;
+        border: 1px solid $green;
         border-radius: 20px;
     
         &:hover {
             background-color: #C9E3AB;
-            color: #494ca2;
+            color: $main;
         }
     }
 
@@ -182,7 +178,7 @@ html {
     &-image {
         align-self: flex-start;
         width: 8rem;
-        border: 1px solid #ece7fa;
+        border: 1px solid $lightgray;
         
     }
 
@@ -202,7 +198,7 @@ html {
         background-color: #ececec;
 
         &__blue {
-            background-color: #8186d5;
+            background-color: $secondary;
         }
     }
 
@@ -213,7 +209,7 @@ html {
 
 .text {
     &-light {
-        color: #ece7fa;
+        color: $lightgray;
     }
 
     &-center {
@@ -277,12 +273,12 @@ html {
     width: 100%;
     height: 50px;
     overflow: hidden;
-    color: #ece7fa;
+    color: $lightgray;
 
     input {
         width: 100%;
         height: 100%;
-        color: #aed581;
+        color: $green;
         padding-top: 20px;
         border: none;
         background: none;
@@ -291,7 +287,7 @@ html {
         &:focus + .label-container .label-content, &:valid + .label-container .label-content {
             transform: translateY(-150%);
             font-size: .9rem;
-            color: #aed581;
+            color: $green;
         }
 
         &:focus + .label-container::after, &:valid + .label-container::after {
@@ -307,7 +303,7 @@ html {
         height: 100%;
         text-align: left;
         pointer-events: none;
-        border-bottom: 1px solid #ece7fa;
+        border-bottom: 1px solid $lightgray;
 
         &::after {
             content: '';
@@ -316,7 +312,7 @@ html {
             bottom: -1px;
             height: 100%;
             width: 100%;
-            border-bottom: 2px solid #aed581;
+            border-bottom: 2px solid $green;
             transition: all 0.3s ease;
             transform: translateX(-100%);
         }
@@ -360,7 +356,7 @@ html {
 .icon {
     font-family: "Font Awesome";
     font-size: 1.2rem;
-    color: #aed581;
+    color: $green;
     cursor: pointer;
 
     &-bottom {
@@ -377,24 +373,6 @@ html {
 @keyframes shakeDown {
     from, to { transform: translate3d(0, 0, 0); }
     50% { transform: translate3d(0, 4px, 0); }
-}
-
-footer {
-    padding: 2rem 4rem;
-
-    p {
-        color: #ece7fa;
-    }
-
-    .footer-icons {
-        margin-top: 1rem;
-
-        .footer-icon {
-            width: 30px;
-            height: auto;
-            margin-right: 4px;
-        }
-    }
 }
 
 @media screen and (max-width: 600px) {

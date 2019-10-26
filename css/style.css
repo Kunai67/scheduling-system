@@ -7,6 +7,12 @@
   letter-spacing: .5px;
 }
 
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
 @font-face {
   font-family: "Montserrat Light";
   src: url("../fonts/Montserrat-Light.ttf");
@@ -85,10 +91,22 @@ header nav ul li {
   background-color: #494ca2;
 }
 
-html {
-  scroll-behavior: smooth;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+footer {
+  padding: 2rem 4rem;
+}
+
+footer p {
+  color: #ece7fa;
+}
+
+footer .footer-icons {
+  margin-top: 1rem;
+}
+
+footer .footer-icons .footer-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 4px;
 }
 
 .container {
@@ -491,24 +509,6 @@ html {
     -webkit-transform: translate3d(0, 4px, 0);
             transform: translate3d(0, 4px, 0);
   }
-}
-
-footer {
-  padding: 2rem 4rem;
-}
-
-footer p {
-  color: #ece7fa;
-}
-
-footer .footer-icons {
-  margin-top: 1rem;
-}
-
-footer .footer-icons .footer-icon {
-  width: 30px;
-  height: auto;
-  margin-right: 4px;
 }
 
 @media screen and (max-width: 600px) {
