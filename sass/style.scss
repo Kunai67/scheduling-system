@@ -1,45 +1,11 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Lato Regular";
-    letter-spacing: .5px;
-}
+@import './reset';
+@import './fonts';
+@import './nav';
 
 html {
     scroll-behavior: smooth;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-}
-
-@font-face {
-    font-family: "Montserrat Light";
-    src: url('../fonts/Montserrat-Light.ttf');
-}
-
-@font-face {
-    font-family: "Montserrat Regular";
-    src: url('../fonts/Montserrat-Regular.ttf');
-}
-
-@font-face {
-    font-family: "Montserrat Semibold";
-    src: url('../fonts/Montserrat-SemiBold.ttf');
-}
-
-@font-face {
-    font-family: "Muli";
-    src: url('../fonts/Muli[wght].ttf');
-}
-
-@font-face {
-    font-family: "Font Awesome";
-    src: url('../fonts/Font\ Awesome\ 5\ Free-Solid-900.otf');
-}
-
-@font-face {
-    font-family: "Lato Regular";
-    src: url('../fonts/Lato-Regular.ttf');
 }
 
 .container {
@@ -144,46 +110,6 @@ html {
     }
 }
 
-.animate {
-    background-color: #494ca2;
-}
-
-header {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    background-color: none;
-    transition: background-color 1.2s ease;
-    z-index: 10;
-
-    nav {
-        width: 100%;
-        padding: .5rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #ece7fa;
-
-        span {
-            font-family: "Muli";
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1.2rem;
-        }
-
-        ul {
-            list-style-type: none;
-        
-            li {
-                font-size: .9rem;
-                font-family: "Lato Regular";
-                padding: 4px 8px;
-                cursor: pointer;
-            }
-        }
-    }
-}
-
 .grid {
     display: grid;
 
@@ -213,7 +139,7 @@ header {
         grid-template-columns: auto 1fr;
         align-items: center;
         grid-gap: 1rem;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
         padding: 2rem 0;
         padding-left: 1.5rem;
         padding-right: 2rem;

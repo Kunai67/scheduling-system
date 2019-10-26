@@ -7,12 +7,15 @@
   letter-spacing: .5px;
 }
 
+<<<<<<< HEAD
 html {
   scroll-behavior: smooth;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
 
+=======
+>>>>>>> main-ui
 @font-face {
   font-family: "Montserrat Light";
   src: url("../fonts/Montserrat-Light.ttf");
@@ -38,9 +41,68 @@ html {
   src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
 }
 
+<<<<<<< HEAD
 @font-face {
   font-family: "Lato Regular";
   src: url("../fonts/Lato-Regular.ttf");
+=======
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  -webkit-transition: background-color 0.7s ease;
+  transition: background-color 0.7s ease;
+  z-index: 10;
+}
+
+header nav {
+  width: 100%;
+  padding: .5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333;
+}
+
+header nav span {
+  font-family: "Muli";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  text-transform: uppercase;
+  font-family: "Montserrat Regular";
+  padding: 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.animate {
+  background-color: #494ca2;
+}
+
+#drag-1 {
+  padding: 2rem;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+>>>>>>> main-ui
 }
 
 .container {
@@ -148,6 +210,7 @@ html {
   background-color: #B8D7BB;
 }
 
+<<<<<<< HEAD
 .animate {
   background-color: #494ca2;
 }
@@ -294,6 +357,8 @@ header nav ul li {
   margin-right: 4px;
 }
 
+=======
+>>>>>>> main-ui
 .bg-light {
   background-color: #ececec;
 }
