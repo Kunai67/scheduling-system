@@ -3,7 +3,8 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Montserrat Regular";
+  font-family: "Lato Regular";
+  letter-spacing: .5px;
 }
 
 @font-face {
@@ -31,14 +32,19 @@
   src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
 }
 
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
-  -webkit-transition: background-color 0.7s ease;
-  transition: background-color 0.7s ease;
+  background-color: none;
+  -webkit-transition: background-color 1.2s ease;
+  transition: background-color 1.2s ease;
   z-index: 10;
 }
 
@@ -54,7 +60,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #333;
+  color: #ece7fa;
 }
 
 header nav span {
@@ -69,10 +75,9 @@ header nav ul {
 }
 
 header nav ul li {
-  text-transform: uppercase;
-  font-family: "Montserrat Regular";
+  font-size: .9rem;
+  font-family: "Lato Regular";
   padding: 4px 8px;
-  border-radius: 2px;
   cursor: pointer;
 }
 

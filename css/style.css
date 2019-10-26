@@ -7,15 +7,6 @@
   letter-spacing: .5px;
 }
 
-<<<<<<< HEAD
-html {
-  scroll-behavior: smooth;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-
-=======
->>>>>>> main-ui
 @font-face {
   font-family: "Montserrat Light";
   src: url("../fonts/Montserrat-Light.ttf");
@@ -41,19 +32,19 @@ html {
   src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
 }
 
-<<<<<<< HEAD
 @font-face {
   font-family: "Lato Regular";
   src: url("../fonts/Lato-Regular.ttf");
-=======
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
-  -webkit-transition: background-color 0.7s ease;
-  transition: background-color 0.7s ease;
+  background-color: none;
+  -webkit-transition: background-color 1.2s ease;
+  transition: background-color 1.2s ease;
   z-index: 10;
 }
 
@@ -69,7 +60,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #333;
+  color: #ece7fa;
 }
 
 header nav span {
@@ -84,10 +75,9 @@ header nav ul {
 }
 
 header nav ul li {
-  text-transform: uppercase;
-  font-family: "Montserrat Regular";
+  font-size: .9rem;
+  font-family: "Lato Regular";
   padding: 4px 8px;
-  border-radius: 2px;
   cursor: pointer;
 }
 
@@ -95,14 +85,10 @@ header nav ul li {
   background-color: #494ca2;
 }
 
-#drag-1 {
-  padding: 2rem;
-  background-color: dodgerblue;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
->>>>>>> main-ui
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 .container {
@@ -210,55 +196,6 @@ header nav ul li {
   background-color: #B8D7BB;
 }
 
-<<<<<<< HEAD
-.animate {
-  background-color: #494ca2;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: none;
-  -webkit-transition: background-color 1.2s ease;
-  transition: background-color 1.2s ease;
-  z-index: 10;
-}
-
-header nav {
-  width: 100%;
-  padding: .5rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #ece7fa;
-}
-
-header nav span {
-  font-family: "Muli";
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-}
-
-header nav ul {
-  list-style-type: none;
-}
-
-header nav ul li {
-  font-size: .9rem;
-  font-family: "Lato Regular";
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
 .grid {
   display: -ms-grid;
   display: grid;
@@ -296,8 +233,8 @@ header nav ul li {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 1rem;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 2rem 0;
   padding-left: 1.5rem;
   padding-right: 2rem;
@@ -357,8 +294,6 @@ header nav ul li {
   margin-right: 4px;
 }
 
-=======
->>>>>>> main-ui
 .bg-light {
   background-color: #ececec;
 }
