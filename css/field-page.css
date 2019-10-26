@@ -1,0 +1,563 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato Regular";
+  letter-spacing: .5px;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Semibold";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli[wght].ttf");
+}
+
+@font-face {
+  font-family: "Font Awesome";
+  src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: none;
+  -webkit-transition: background-color 1.2s ease;
+  transition: background-color 1.2s ease;
+  z-index: 10;
+}
+
+header nav {
+  width: 100%;
+  padding: .5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ece7fa;
+}
+
+header nav span {
+  font-family: "Muli";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  font-size: .9rem;
+  font-family: "Lato Regular";
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.animate {
+  background-color: #494ca2;
+}
+
+.form-login {
+  padding: 0 10rem;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  color: #ece7fa;
+}
+
+.form-group .input-black {
+  color: #8186d5;
+}
+
+.form-group .input-black:focus + .label-container .label-content, .form-group .input-black:valid + .label-container .label-content {
+  color: #8186d5;
+}
+
+.form-group input {
+  width: 100%;
+  height: 100%;
+  color: #aed581;
+  padding-top: 20px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.form-group input:focus + .label-container .label-content, .form-group input:valid + .label-container .label-content {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: .9rem;
+  color: #aed581;
+}
+
+.form-group input:focus + .label-container::after, .form-group input:valid + .label-container::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.form-group .label-container-black {
+  border-bottom: 1px solid #333;
+}
+
+.form-group .label-container-black::after {
+  border-bottom: 2px solid #8186d5;
+}
+
+.form-group .label-container-black .label-content-black {
+  color: #333;
+}
+
+.form-group label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+  border-bottom: 1px solid #ece7fa;
+}
+
+.form-group label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #aed581;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.form-group label .label-content {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-features {
+  margin-top: -1rem;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 0 10rem 4rem 10rem;
+}
+
+.grid-features__page {
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.grid-features p {
+  text-align: justify;
+}
+
+.grid-developers {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 0 4rem;
+  padding-bottom: 4rem;
+}
+
+.grid-developer {
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1rem;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+}
+
+.grid-developer .icon-container {
+  margin-top: 2rem;
+}
+
+.grid-footer {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.grid-center {
+  place-items: center;
+}
+
+.grid-form-input {
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1rem;
+}
+
+.grid-form-input img {
+  width: 40px;
+  height: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.grid-manage-fields {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 4rem;
+}
+
+.grid-toolbar {
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  grid-gap: 1rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer {
+  padding: 2rem 4rem;
+}
+
+footer p {
+  color: #ece7fa;
+}
+
+footer .footer-icons {
+  margin-top: 1rem;
+}
+
+footer .footer-icons .footer-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 4px;
+}
+
+.bg-dark {
+  background-color: #464646;
+}
+
+.btn {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #aed581;
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-default {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  outline: none;
+  border: none;
+  color: #aed581;
+  padding: 0 6px 6px 6px;
+}
+
+.btn-default::before, .btn-default::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #aed581;
+  -webkit-transition: width 0.7s ease;
+  transition: width 0.7s ease;
+}
+
+.btn-default::before {
+  left: 50%;
+}
+
+.btn-default::after {
+  right: 50%;
+}
+
+.btn-default:hover::before, .btn-default:hover::after {
+  width: 50%;
+}
+
+.btn-border {
+  border: 1px solid #aed581;
+  border-radius: 20px;
+}
+
+.btn-border:hover {
+  background-color: #C9E3AB;
+  color: #494ca2;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #95C499;
+  border-radius: 20px;
+}
+
+.btn-success:hover {
+  background-color: #B8D7BB;
+}
+
+.btn-pagination {
+  color: #333;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #eee;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+
+.btn-pagination:not(nth-child(1)) {
+  border-left: none !important;
+}
+
+.btn-pagination a {
+  padding: 8px 10;
+  color: #333;
+}
+
+.btn-pagination .link-pagination {
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.btn-pagination:hover {
+  background-color: #f0f0f0;
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Semibold";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli[wght].ttf");
+}
+
+@font-face {
+  font-family: "Font Awesome";
+  src: url("../fonts/Font Awesome 5 Free-Solid-900.otf");
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+/*.table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px 4px 4px 10px;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    padding: 0;
+
+    thead, tfoot {
+        text-transform: uppercase;
+        background-color: $secondary;
+        font-size: .8rem;
+        color: $white;
+
+        tr {
+            td {
+                padding: 10px;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                font-size: .9rem;
+                padding: 4px 4px 4px 10px;
+            }
+
+            &:nth-child(even) {
+                background-color: #efefef;
+            }
+        }
+    }
+}*/
+.table {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.table th, .table td {
+  padding: 8px 14px;
+  font-weight: 400;
+}
+
+.table tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.table thead, .table tfoot {
+  background-color: #8186d5;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.table-paginations {
+  margin-top: .5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-dark-blue {
+  background-color: #494ca2;
+}
+
+.round-icon {
+  padding: .5rem;
+  border-radius: 50%;
+}
+
+.pointer-right {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.pointer-right::after, .pointer-right::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: #464646;
+  right: 0px;
+  z-index: -1;
+}
+
+.pointer-right::before {
+  bottom: 50%;
+  -webkit-transform: skewX(35deg);
+          transform: skewX(35deg);
+}
+
+.pointer-right::after {
+  top: 50%;
+  -webkit-transform: skewX(-35deg);
+          transform: skewX(-35deg);
+}
+
+.btn {
+  margin: 0;
+  border-radius: 4px;
+}
+
+.icon {
+  font-family: "Font Awesome";
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-manage-fields {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .grid-manage-fields h1 {
+    font-size: 1rem;
+  }
+  .table thead tr td, .table tfoot tr td {
+    font-size: .7rem;
+  }
+  .table td {
+    font-size: .8rem;
+  }
+  .icon, .link-pagination {
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=field-page.css.map */

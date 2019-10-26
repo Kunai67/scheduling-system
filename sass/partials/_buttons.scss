@@ -1,0 +1,94 @@
+.btn {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: $green;
+    background: none;
+    outline: none;
+    border: none;
+    transition: 0.8s ease-in-out;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &-default {
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+        background: none;
+        outline: none;
+        border: none;
+        color: $green;
+        padding: 0 6px 6px 6px;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background-color: $green;
+            transition: width 0.7s ease;
+        }
+
+        &::before {
+            left: 50%;
+        }
+
+        &::after {
+            right: 50%;
+        }
+
+        &:hover::before, &:hover::after {
+            width: 50%;
+        }
+    }
+
+    &-border {
+        border: 1px solid $green;
+        border-radius: 20px;
+    
+        &:hover {
+            background-color: #C9E3AB;
+            color: $main;
+        }
+    }
+
+    &-success {
+        color: #fff;
+        background-color: #95C499;
+        border-radius: 20px;     
+        
+        &:hover {
+            background-color: #B8D7BB;
+        }
+    }
+
+    &-pagination {
+        color: #333;
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #eee;
+        transition: all 0.7s ease;
+        cursor: pointer;
+
+        &:not(nth-child(1)) {
+            border-left: none !important;
+        }
+
+        a {
+            padding: 8px 10;
+            color: #333;
+        }
+
+        .link-pagination {
+            text-decoration: none;
+            font-size: .9rem;
+        }
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+}

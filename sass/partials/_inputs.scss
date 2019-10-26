@@ -1,0 +1,83 @@
+.form {
+    &-login {
+        padding: 0 10rem;
+    }
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    color: $lightgray;
+
+    .input-black {
+        color: $secondary;
+        
+        &:focus + .label-container .label-content, &:valid + .label-container .label-content {
+            color: $secondary;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        color: $green;
+        padding-top: 20px;
+        border: none;
+        background: none;
+        outline: none;
+
+        &:focus + .label-container .label-content, &:valid + .label-container .label-content {
+            transform: translateY(-150%);
+            font-size: .9rem;
+            color: $green;
+        }
+
+        &:focus + .label-container::after, &:valid + .label-container::after {
+            transform: translateX(0%);
+        }
+    }
+
+    .label-container-black {
+        border-bottom: 1px solid #333;
+
+        &::after {
+            border-bottom: 2px solid $secondary;
+        }
+
+        .label-content-black {
+            color: #333;
+        }
+    }
+
+    label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        pointer-events: none;
+        border-bottom: 1px solid $lightgray;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 100%;
+            width: 100%;
+            border-bottom: 2px solid $green;
+            transition: all 0.3s ease;
+            transform: translateX(-100%);
+        }
+
+        .label-content {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+    }
+}
