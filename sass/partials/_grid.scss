@@ -57,4 +57,16 @@
             align-self: flex-end;
         }
     }
+
+    &-manage-fields {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        padding: 4rem;
+    }
+
+    &-toolbar {
+        grid-template-columns: 1fr auto;
+        grid-gap: 1rem;
+        align-items: flex-end;
+    }
 }
