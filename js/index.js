@@ -10,6 +10,6 @@ window.addEventListener('scroll', () => {
     }
     else {
         header.classList.remove('animate');
-        nav.style.color = "#333";
+        nav.style.color = "#ece7fa";
     }
 });

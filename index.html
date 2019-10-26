@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Scheduler -- Web Application</title>
 
     <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -13,24 +13,126 @@
         <nav class="nav-content">
             <span>Scheduler</span>
             <ul>
-                <li>Sign In</li>
+                <li><a href="/login.html" class="btn-default">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="bg-light p-relative">
+    <section class="page page-main page-content__center bg-light p-relative">
+        <div class="overlay overlay-gradient"></div>
+        <div class="overlay overlay-dark"></div>
         <div class="container-sm">
             <h1>A user-friendly schedule management system for you</h1>
             <p>Scheduler is an web application that can run in any platforms. It is lightweight, fast, and reliable so that you can work your schedules easily.</p>
-            <button type="button" class="btn btn-border">Learn More</button>
+            <a href="#page1"><button type="button" class="btn btn-border">Learn More</button></a>
 
             <span class="icon icon-bottom icon-animate-translateY p-absolute">&#xf107;</span>
         </div>
     </section>
 
-    <section>
-        Yow, boss!
+    <section id="page1">
+        <div class="container-fluid grid grid-features__page">
+            <div class="header-text">
+                <h1>What can Scheduler do?</h1>
+                <p>Here&apos;s some of the features that are implemented in the system.</p>
+            </div>
+
+            <div class="grid grid-features">
+                <div class="feature">
+                    <img src="./img/Hand Cursor_100px.png" alt="" />
+                    <h1>Drag and drop</h1>
+                    <p>
+                        Using this feature, organizing a schedule will be much simpler and faster.  
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <img src="./img/touchscreen_smartphone_100px.png" alt="" />
+                    <h1>Mobile Responsive</h1>
+                    <p>
+                        Scheduler can also be access through smartphones so that you can continue your work anytime.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <img src="./img/man_browser_window_100px.png" alt="" />
+                    <h1>Intuitive Interface</h1>
+                    <p>We made it so that the user interfaces are self-explanatory and can learn with minimal supervision.</p>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section class="bg-light__blue">
+        <div class="header-text text-center text-light">    
+            <h1>Get started now</h1>
+            <p>Grab the production version and begin creating schedules instantly.</p>
+            <button type="button" class="btn btn-success">Sign In</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="header-text">
+            <h1 class="text-center">The Developers</h1>
+        </div>
+
+        <div class="grid grid-developers">
+            <div class="grid grid-developer">
+                <img class="developer-image" src="./img/agustin-ian-neil.jpeg" alt="" />
+                <div>
+                    <div class="developer-text">
+                        <h3>Ian Neil Agustin</h3>
+                        <p>Full-stack Web Developer</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure commodi repellendus pariatur totam omnis ex non, illo quas veritatis doloremque?</p>
+                
+                    <div class="developer-icons">
+                        <img src="./img/twitter_squared_96px_black.png" alt="" />
+                        <img src="./img/facebook_f_96px_black.png" alt="" />
+                        <img src="./img/instagram_new_96px_black.png" alt="" />
+                        <img src="./img/github_96px_black.png" alt="" />
+                    </div>
+
+                    <div class="text-right icon-container">
+                        <a href="#" class="btn icon">&#xf105;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-developer">
+                <img class="developer-image" src="./img/ricohermoso-joshua-ming.jpg" alt="" />                
+                <div>
+                    <div class="developer-text">
+                        <h3>Joshua Ming Ricohermoso</h3>
+                        <p>Full-stack Web Developer</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consectetur? Officia facere mollitia libero illo.</p>
+                
+                    <div class="developer-icons">
+                        <img src="./img/twitter_squared_96px_black.png" alt="" />
+                        <img src="./img/facebook_f_96px_black.png" alt="" />
+                        <img src="./img/instagram_new_96px_black.png" alt="" />
+                        <img src="./img/github_96px_black.png" alt="" />
+                    </div>
+
+                    <div class="text-right icon-container">
+                        <a href="#" class="btn icon">&#xf105;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark">
+        <p>Made by Scheduler &copy; 2019</p>
+        <div class="footer-icons">
+            <img class="footer-icon" src="./img/twitter_squared_96px.png" alt="" />
+            <img class="footer-icon" src="./img/facebook_f_96px.png" alt="" />
+            <img class="footer-icon" src="./img/pinterest_96px.png" alt="" />
+            <img class="footer-icon" src="./img/instagram_new_96px.png" alt="" />
+        </div>
+    </footer>
 
     <script src="./js/index.js"></script>
 </body>
