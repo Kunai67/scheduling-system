@@ -1,70 +1,102 @@
 @import './fonts';
 @import './variables';
 
-/*.table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: 4px 4px 4px 10px;
-    border: 1px solid #ddd;
-    margin: 1rem 0;
-    padding: 0;
-
-    thead, tfoot {
-        text-transform: uppercase;
-        background-color: $secondary;
-        font-size: .8rem;
-        color: $white;
-
-        tr {
-            td {
-                padding: 10px;
-            }
-        }
+.container {
+    &-center {
+        width: 100%;
+        display: grid;
+        place-items: center;
     }
 
-    tbody {
-        tr {
-            td {
-                font-size: .9rem;
-                padding: 4px 4px 4px 10px;
-            }
-
-            &:nth-child(even) {
-                background-color: #efefef;
-            }
-        }
+    &-wrap {
+        margin-top: 1rem;
+        width: 100%;
     }
-}*/
+
+    &-border {
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+    }
+
+    &-pagination {
+        margin-bottom: 1rem;
+    }
+}
 
 .table {
     width: 100%;
-    border: 1px solid #e0e0e0;
-    border-collapse: collapse;
-    background-color: $white;
-    text-align: left;
-    margin-top: 1rem;
+    display: table;
+    margin: 0;
 
-    th, td {
-        padding: 8px 14px;
-        font-weight: 400;
-    }
-
-    tr:nth-child(even) {
-        background-color: #efefef;
-    }
-
-    thead, tfoot {
-        background-color: $secondary;
-        color: $white;
-        font-weight: 400;
+    .row.header .cell {
+        padding: 12px 10px;
+        border-bottom: 1px solid #efefef;
+        font-family: "Poppins Regular";
         font-size: .8rem;
+        font-weight: bold;
+        color: #555;
         text-transform: uppercase;
     }
 
+    .row {
+        display: table-row;
+        background-color: #fff;
+
+        &:nth-child(odd):not(:nth-child(1)) {
+            background-color: #f4f4f4;
+        }
+        
+        &:not(.header):hover {
+            background-color: #29b6f6;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        &:hover > .cell::before {
+            color: #f0f0f0;
+        }
+    }
+
     &-paginations {
-        margin-top: .5rem;
         width: 100%;
         display: flex;
         justify-content: flex-end;
+    }
+}
+
+.cell {
+    display: table-cell;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-family: "Muli";
+}
+
+@media screen and (max-width: 768px) {
+    .row.header {
+        display: none;
+    }
+
+    .cell {
+        display: block;
+        padding-left: 1rem;
+    }
+
+    .cell::before {
+        display: block;
+        content: attr(data-title);
+        font-size: .8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #555;
+    }
+
+    .row .cell:nth-child(1) {
+        margin-top: 1rem;
+    }
+
+    .row .cell:nth-last-child(1) {
+        margin-bottom: 1rem;
     }
 }

@@ -22,67 +22,50 @@
         <div class="grid grid-manage-fields">
             <div class="manage-field">
                 <h1>Manage Departments</h1>
-                <div class="grid grid-toolbar">
-                    <div class="form-group">
-                        <input type="text" class="input-black" autocomplete="off" required />
-                        <label class="label-container label-container-black"><span class="label-content label-content-black">Search</span></label>
+
+                <div class="container-wrap">
+                    <div class="position position-space-between">
+                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <div class="material-input">
+                            <input type="text" id="search" autocomplete="off" required />
+                            <label for="search">
+                                <span>Search</span>
+                            </label>
+                        </div>
                     </div>
-
-                    <input type="button" class="btn btn-success" value="Add Record" />
-                </div>
-
-                <table class="table">
-                    <thead class="table-header">
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="table-paginations">
+                    <div class="container-border">
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Id</div>
+                                <div class="cell">Firstname</div>
+                                <div class="cell">Lastname</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Age</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">1</div>
+                                <div class="cell" data-title="Firstname">Joshua Ming</div>
+                                <div class="cell" data-title="Lastname">Ricohermoso</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">2</div>
+                                <div class="cell" data-title="Firstname">Ian Nei</div>
+                                <div class="cell" data-title="Lastname">Agustin</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">3</div>
+                                <div class="cell" data-title="Firstname">John Paul</div>
+                                <div class="cell" data-title="Lastname">Monedo</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-paginations">
                     <div class="btn-pagination">
                         <a href="#" class="icon">&#xf104;</a>
                     </div>
@@ -98,410 +81,326 @@
                     <div class="btn-pagination">
                         <a href="#" class="icon">&#xf105;</a>
                     </div>
+                </div>
                 </div>
             </div>
             <div class="manage-field">
                 <h1>Manage Courses</h1>
 
-                <div class="grid grid-toolbar">
-                    <div class="form-group">
-                        <input type="text" class="input-black" autocomplete="off" required />
-                        <label class="label-container label-container-black"><span class="label-content label-content-black">Search</span></label>
+                <div class="container-wrap">
+                    <div class="position position-space-between">
+                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <div class="material-input">
+                            <input type="text" id="search" autocomplete="off" required />
+                            <label for="search">
+                                <span>Search</span>
+                            </label>
+                        </div>
                     </div>
-
-                    <input type="button" class="btn btn-success" value="Add Record" />
-                </div>
-
-                <table class="table">
-                    <thead class="table-header">
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="table-paginations">
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf104;</a>
+                    <div class="container-border">
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Id</div>
+                                <div class="cell">Firstname</div>
+                                <div class="cell">Lastname</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Age</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">1</div>
+                                <div class="cell" data-title="Firstname">Joshua Ming</div>
+                                <div class="cell" data-title="Lastname">Ricohermoso</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">2</div>
+                                <div class="cell" data-title="Firstname">Ian Nei</div>
+                                <div class="cell" data-title="Lastname">Agustin</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">3</div>
+                                <div class="cell" data-title="Firstname">John Paul</div>
+                                <div class="cell" data-title="Lastname">Monedo</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">1</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">2</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">3</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf105;</a>
+                    <div class="table-paginations">
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf104;</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">1</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">2</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">3</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf105;</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="manage-field">
                 <h1>Manage Subjects</h1>
 
-                <div class="grid grid-toolbar">
-                    <div class="form-group">
-                        <input type="text" class="input-black" autocomplete="off" required />
-                        <label class="label-container label-container-black"><span class="label-content label-content-black">Search</span></label>
+                <div class="container-wrap">
+                    <div class="position position-space-between">
+                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <div class="material-input">
+                            <input type="text" id="search" autocomplete="off" required />
+                            <label for="search">
+                                <span>Search</span>
+                            </label>
+                        </div>
                     </div>
-
-                    <input type="button" class="btn btn-success" value="Add Record" />
-                </div>
-
-                <table class="table">
-                    <thead class="table-header">
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="table-paginations">
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf104;</a>
+                    <div class="container-border">
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Id</div>
+                                <div class="cell">Firstname</div>
+                                <div class="cell">Lastname</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Age</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">1</div>
+                                <div class="cell" data-title="Firstname">Joshua Ming</div>
+                                <div class="cell" data-title="Lastname">Ricohermoso</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">2</div>
+                                <div class="cell" data-title="Firstname">Ian Nei</div>
+                                <div class="cell" data-title="Lastname">Agustin</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">3</div>
+                                <div class="cell" data-title="Firstname">John Paul</div>
+                                <div class="cell" data-title="Lastname">Monedo</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">1</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">2</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">3</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf105;</a>
+                    <div class="table-paginations">
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf104;</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">1</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">2</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">3</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf105;</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="manage-field">
                 <h1>Manage Instructors</h1>
 
-                <div class="grid grid-toolbar">
-                    <div class="form-group">
-                        <input type="text" class="input-black" autocomplete="off" required />
-                        <label class="label-container label-container-black"><span class="label-content label-content-black">Search</span></label>
+                <div class="container-wrap">
+                    <div class="position position-space-between">
+                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <div class="material-input">
+                            <input type="text" id="search" autocomplete="off" required />
+                            <label for="search">
+                                <span>Search</span>
+                            </label>
+                        </div>
                     </div>
-
-                    <input type="button" class="btn btn-success" value="Add Record" />
-                </div>
-
-                <table class="table">
-                    <thead class="table-header">
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="table-paginations">
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf104;</a>
+                    <div class="container-border">
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Id</div>
+                                <div class="cell">Firstname</div>
+                                <div class="cell">Lastname</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Age</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">1</div>
+                                <div class="cell" data-title="Firstname">Joshua Ming</div>
+                                <div class="cell" data-title="Lastname">Ricohermoso</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">2</div>
+                                <div class="cell" data-title="Firstname">Ian Nei</div>
+                                <div class="cell" data-title="Lastname">Agustin</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">3</div>
+                                <div class="cell" data-title="Firstname">John Paul</div>
+                                <div class="cell" data-title="Lastname">Monedo</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">1</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">2</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">3</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf105;</a>
+                    <div class="table-paginations">
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf104;</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">1</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">2</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">3</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf105;</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="manage-field">
                 <h1>Manage Rooms</h1>
 
-                <div class="grid grid-toolbar">
-                    <div class="form-group">
-                        <input type="text" class="input-black" autocomplete="off" required />
-                        <label class="label-container label-container-black"><span class="label-content label-content-black">Search</span></label>
+                <div class="container-wrap">
+                    <div class="position position-space-between">
+                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <div class="material-input">
+                            <input type="text" id="search" autocomplete="off" required />
+                            <label for="search">
+                                <span>Search</span>
+                            </label>
+                        </div>
                     </div>
-
-                    <input type="button" class="btn btn-success" value="Add Record" />
-                </div>
-
-                <table class="table">
-                    <thead class="table-header">
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="table-paginations">
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf104;</a>
+                    <div class="container-border">
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Id</div>
+                                <div class="cell">Firstname</div>
+                                <div class="cell">Lastname</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Age</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">1</div>
+                                <div class="cell" data-title="Firstname">Joshua Ming</div>
+                                <div class="cell" data-title="Lastname">Ricohermoso</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">2</div>
+                                <div class="cell" data-title="Firstname">Ian Nei</div>
+                                <div class="cell" data-title="Lastname">Agustin</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">3</div>
+                                <div class="cell" data-title="Firstname">John Paul</div>
+                                <div class="cell" data-title="Lastname">Monedo</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">1</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">2</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">3</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf105;</a>
+                    <div class="table-paginations">
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf104;</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">1</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">2</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">3</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf105;</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="manage-field">
                 <h1>Manage Accounts</h1>
 
-                <div class="grid grid-toolbar">
-                    <div class="form-group">
-                        <input type="text" class="input-black" autocomplete="off" required />
-                        <label class="label-container label-container-black"><span class="label-content label-content-black">Search</span></label>
+                <div class="container-wrap">
+                    <div class="position position-space-between">
+                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <div class="material-input">
+                            <input type="text" id="search" autocomplete="off" required />
+                            <label for="search">
+                                <span>Search</span>
+                            </label>
+                        </div>
                     </div>
-
-                    <input type="button" class="btn btn-success" value="Add Record" />
-                </div>
-
-                <table class="table">
-                    <thead class="table-header">
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>actions</td>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>sex</td>
-                            <td>gender</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="table-paginations">
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf104;</a>
+                    <div class="container-border">
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Id</div>
+                                <div class="cell">Firstname</div>
+                                <div class="cell">Lastname</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Age</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">1</div>
+                                <div class="cell" data-title="Firstname">Joshua Ming</div>
+                                <div class="cell" data-title="Lastname">Ricohermoso</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">2</div>
+                                <div class="cell" data-title="Firstname">Ian Nei</div>
+                                <div class="cell" data-title="Lastname">Agustin</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell" data-title="Id">3</div>
+                                <div class="cell" data-title="Firstname">John Paul</div>
+                                <div class="cell" data-title="Lastname">Monedo</div>
+                                <div class="cell" data-title="Email">joshuaming.jm@gmail.com</div>
+                                <div class="cell" data-title="Age">19</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">1</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">2</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="link-pagination">3</a>
-                    </div>
-                    <div class="btn-pagination">
-                        <a href="#" class="icon">&#xf105;</a>
+                    <div class="table-paginations">
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf104;</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">1</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">2</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="link-pagination">3</a>
+                        </div>
+                        <div class="btn-pagination">
+                            <a href="#" class="icon">&#xf105;</a>
+                        </div>
                     </div>
                 </div>
             </div>

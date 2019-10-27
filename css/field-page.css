@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Lato Regular";
+  font-family: "Muli";
   letter-spacing: .5px;
 }
 
@@ -43,6 +43,11 @@ html {
   src: url("../fonts/Lato-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
 header {
   position: fixed;
   top: 0;
@@ -70,9 +75,9 @@ header nav {
 }
 
 header nav span {
-  font-family: "Muli";
+  font-family: "Poppins Regular";
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 1.2rem;
 }
 
@@ -176,6 +181,164 @@ header nav ul li {
   left: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.material-input {
+  height: 30px;
+  width: 200px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.material-input input {
+  height: 100%;
+  width: 100%;
+  padding-top: 8px;
+  padding-left: 6px;
+  padding-right: 4px;
+  font-family: "Poppins Regular";
+  border: none;
+  background: none;
+  outline: none;
+  color: #29b6f6;
+}
+
+.material-input input:focus + label, .material-input input:valid + label {
+  border-radius: 4px;
+  border: 2px solid #29b6f6;
+}
+
+.material-input input:focus + label span, .material-input input:valid + label span {
+  top: 50%;
+  -webkit-transform: translateY(-170%);
+          transform: translateY(-170%);
+  font-size: .8rem;
+  font-weight: bold;
+  color: #29b6f6;
+  background: #fff;
+  padding: 0 2px;
+}
+
+.material-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #555;
+}
+
+.material-input label span {
+  position: absolute;
+  font-family: "Poppins Regular";
+  text-transform: uppercase;
+  color: #555;
+  left: 4px;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #aed581;
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Poppins Regular";
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  outline: none;
+  border: none;
+  color: #aed581;
+  padding: 0 6px 6px 6px;
+}
+
+.btn-default::before, .btn-default::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #aed581;
+  -webkit-transition: width 0.7s ease;
+  transition: width 0.7s ease;
+}
+
+.btn-default::before {
+  left: 50%;
+}
+
+.btn-default::after {
+  right: 50%;
+}
+
+.btn-default:hover::before, .btn-default:hover::after {
+  width: 50%;
+}
+
+.btn-border {
+  border: 1px solid #aed581;
+  border-radius: 20px;
+}
+
+.btn-border:hover {
+  background-color: #C9E3AB;
+  color: #494ca2;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #95C499;
+  border-radius: 20px;
+}
+
+.btn-success:hover {
+  background-color: #B8D7BB;
+}
+
+.btn-pagination {
+  color: #333;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #eee;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+
+.btn-pagination:not(nth-child(1)) {
+  border-left: none !important;
+}
+
+.btn-pagination a {
+  padding: 8px 10;
+  color: #333;
+}
+
+.btn-pagination .link-pagination {
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.btn-pagination:hover {
+  background-color: #f0f0f0;
 }
 
 .grid {
@@ -290,104 +453,6 @@ footer .footer-icons .footer-icon {
   background-color: #464646;
 }
 
-.btn {
-  margin-top: 2rem;
-  text-decoration: none;
-  color: #aed581;
-  background: none;
-  outline: none;
-  border: none;
-  -webkit-transition: 0.8s ease-in-out;
-  transition: 0.8s ease-in-out;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.btn-default {
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  background: none;
-  outline: none;
-  border: none;
-  color: #aed581;
-  padding: 0 6px 6px 6px;
-}
-
-.btn-default::before, .btn-default::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  height: 1px;
-  width: 0;
-  background-color: #aed581;
-  -webkit-transition: width 0.7s ease;
-  transition: width 0.7s ease;
-}
-
-.btn-default::before {
-  left: 50%;
-}
-
-.btn-default::after {
-  right: 50%;
-}
-
-.btn-default:hover::before, .btn-default:hover::after {
-  width: 50%;
-}
-
-.btn-border {
-  border: 1px solid #aed581;
-  border-radius: 20px;
-}
-
-.btn-border:hover {
-  background-color: #C9E3AB;
-  color: #494ca2;
-}
-
-.btn-success {
-  color: #fff;
-  background-color: #95C499;
-  border-radius: 20px;
-}
-
-.btn-success:hover {
-  background-color: #B8D7BB;
-}
-
-.btn-pagination {
-  color: #333;
-  text-decoration: none;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  border: 1px solid #eee;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  cursor: pointer;
-}
-
-.btn-pagination:not(nth-child(1)) {
-  border-left: none !important;
-}
-
-.btn-pagination a {
-  padding: 8px 10;
-  color: #333;
-}
-
-.btn-pagination .link-pagination {
-  text-decoration: none;
-  font-size: .9rem;
-}
-
-.btn-pagination:hover {
-  background-color: #f0f0f0;
-}
-
 @font-face {
   font-family: "Montserrat Light";
   src: url("../fonts/Montserrat-Light.ttf");
@@ -418,68 +483,71 @@ footer .footer-icons .footer-icon {
   src: url("../fonts/Lato-Regular.ttf");
 }
 
-/*.table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: 4px 4px 4px 10px;
-    border: 1px solid #ddd;
-    margin: 1rem 0;
-    padding: 0;
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
 
-    thead, tfoot {
-        text-transform: uppercase;
-        background-color: $secondary;
-        font-size: .8rem;
-        color: $white;
+.container-center {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
 
-        tr {
-            td {
-                padding: 10px;
-            }
-        }
-    }
+.container-wrap {
+  margin-top: 1rem;
+  width: 100%;
+}
 
-    tbody {
-        tr {
-            td {
-                font-size: .9rem;
-                padding: 4px 4px 4px 10px;
-            }
+.container-border {
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
 
-            &:nth-child(even) {
-                background-color: #efefef;
-            }
-        }
-    }
-}*/
+.container-pagination {
+  margin-bottom: 1rem;
+}
+
 .table {
   width: 100%;
-  border: 1px solid #e0e0e0;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  text-align: left;
-  margin-top: 1rem;
+  display: table;
+  margin: 0;
 }
 
-.table th, .table td {
-  padding: 8px 14px;
-  font-weight: 400;
-}
-
-.table tr:nth-child(even) {
-  background-color: #efefef;
-}
-
-.table thead, .table tfoot {
-  background-color: #8186d5;
-  color: #ffffff;
-  font-weight: 400;
+.table .row.header .cell {
+  padding: 12px 10px;
+  border-bottom: 1px solid #efefef;
+  font-family: "Poppins Regular";
   font-size: .8rem;
+  font-weight: bold;
+  color: #555;
   text-transform: uppercase;
 }
 
+.table .row {
+  display: table-row;
+  background-color: #fff;
+}
+
+.table .row:nth-child(odd):not(:nth-child(1)) {
+  background-color: #f4f4f4;
+}
+
+.table .row:not(.header):hover {
+  background-color: #29b6f6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.table .row:hover > .cell::before {
+  color: #f0f0f0;
+}
+
 .table-paginations {
-  margin-top: .5rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,51 +557,95 @@ footer .footer-icons .footer-icon {
           justify-content: flex-end;
 }
 
+.cell {
+  display: table-cell;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: "Muli";
+}
+
+@media screen and (max-width: 768px) {
+  .row.header {
+    display: none;
+  }
+  .cell {
+    display: block;
+    padding-left: 1rem;
+  }
+  .cell::before {
+    display: block;
+    content: attr(data-title);
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .row .cell:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .row .cell:nth-last-child(1) {
+    margin-bottom: 1rem;
+  }
+}
+
 .page {
   width: 100%;
   height: 100vh;
 }
 
-.bg-dark-blue {
-  background-color: #494ca2;
+.position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
-.round-icon {
-  padding: .5rem;
-  border-radius: 50%;
+.position-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.pointer-right {
-  position: relative;
-  width: 40px;
-  height: 40px;
-}
-
-.pointer-right::after, .pointer-right::before {
-  content: '';
-  position: absolute;
-  width: 30%;
-  height: 30%;
-  background: #464646;
-  right: 0px;
-  z-index: -1;
-}
-
-.pointer-right::before {
-  bottom: 50%;
-  -webkit-transform: skewX(35deg);
-          transform: skewX(35deg);
-}
-
-.pointer-right::after {
-  top: 50%;
-  -webkit-transform: skewX(-35deg);
-          transform: skewX(-35deg);
+.position-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .btn {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
   margin: 0;
+  font-family: "Poppins Regular";
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding: 5px 10px;
   border-radius: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #555;
+  -webkit-transition: background-color 0.4s ease-in;
+  transition: background-color 0.4s ease-in;
+}
+
+.btn:hover {
+  background-color: #e9e9e9;
+}
+
+.btn-blue {
+  background-color: #8186d5;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: #ABAEE3;
+}
+
+.bg-dark-blue {
+  background-color: #494ca2;
 }
 
 .icon {
@@ -549,12 +661,6 @@ footer .footer-icons .footer-icon {
   }
   .grid-manage-fields h1 {
     font-size: 1rem;
-  }
-  .table thead tr td, .table tfoot tr td {
-    font-size: .7rem;
-  }
-  .table td {
-    font-size: .8rem;
   }
   .icon, .link-pagination {
     font-size: .8rem;

@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Lato Regular";
+  font-family: "Muli";
   letter-spacing: .5px;
 }
 
@@ -43,6 +43,11 @@ html {
   src: url("../fonts/Lato-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
 .btn {
   margin-top: 2rem;
   text-decoration: none;
@@ -54,6 +59,9 @@ html {
   transition: 0.8s ease-in-out;
   padding: 10px 20px;
   cursor: pointer;
+  font-family: "Poppins Regular";
+  font-size: .8rem;
+  text-transform: uppercase;
 }
 
 .btn-default {
@@ -228,6 +236,63 @@ html {
   transition: all 0.3s ease;
 }
 
+.material-input {
+  height: 30px;
+  width: 200px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.material-input input {
+  height: 100%;
+  width: 100%;
+  padding-top: 8px;
+  padding-left: 6px;
+  padding-right: 4px;
+  font-family: "Poppins Regular";
+  border: none;
+  background: none;
+  outline: none;
+  color: #29b6f6;
+}
+
+.material-input input:focus + label, .material-input input:valid + label {
+  border-radius: 4px;
+  border: 2px solid #29b6f6;
+}
+
+.material-input input:focus + label span, .material-input input:valid + label span {
+  top: 50%;
+  -webkit-transform: translateY(-170%);
+          transform: translateY(-170%);
+  font-size: .8rem;
+  font-weight: bold;
+  color: #29b6f6;
+  background: #fff;
+  padding: 0 2px;
+}
+
+.material-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #555;
+}
+
+.material-input label span {
+  position: absolute;
+  font-family: "Poppins Regular";
+  text-transform: uppercase;
+  color: #555;
+  left: 4px;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -255,9 +320,9 @@ header nav {
 }
 
 header nav span {
-  font-family: "Muli";
+  font-family: "Poppins Regular";
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 1.2rem;
 }
 
