@@ -20,12 +20,15 @@
 
     <section>
         <div class="grid grid-manage-fields">
+
+            <!-- Departments -->
+
             <div class="manage-field">
                 <h1>Manage Departments</h1>
 
                 <div class="container-wrap">
                     <div class="position position-space-between">
-                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <input type="button" class="btn btn-blue h-100 open-modal" data-modal="modal-create-account" value="New Record" />
                         <div class="material-input">
                             <input type="text" id="search" autocomplete="off" required />
                             <label for="search">
@@ -84,12 +87,17 @@
                 </div>
                 </div>
             </div>
+
+            <!-- End of Manage Department -->
+
+            <!-- Courses -->
+
             <div class="manage-field">
                 <h1>Manage Courses</h1>
 
                 <div class="container-wrap">
                     <div class="position position-space-between">
-                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <input type="button" class="btn btn-blue h-100 open-modal" data-modal="modal-create-account" value="New Record" />
                         <div class="material-input">
                             <input type="text" id="search" autocomplete="off" required />
                             <label for="search">
@@ -148,12 +156,17 @@
                     </div>
                 </div>
             </div>
+
+            <!-- End of Courses -->
+
+            <!-- Subject -->
+
             <div class="manage-field">
                 <h1>Manage Subjects</h1>
 
                 <div class="container-wrap">
                     <div class="position position-space-between">
-                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <input type="button" class="btn btn-blue h-100 open-modal" data-modal="modal-create-account" value="New Record" />
                         <div class="material-input">
                             <input type="text" id="search" autocomplete="off" required />
                             <label for="search">
@@ -212,12 +225,17 @@
                     </div>
                 </div>
             </div>
+
+            <!-- End of Subject -->
+
+            <!-- Instructors -->
+
             <div class="manage-field">
                 <h1>Manage Instructors</h1>
 
                 <div class="container-wrap">
                     <div class="position position-space-between">
-                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <input type="button" class="btn btn-blue h-100 open-modal" data-modal="modal-create-account" value="New Record" />
                         <div class="material-input">
                             <input type="text" id="search" autocomplete="off" required />
                             <label for="search">
@@ -276,12 +294,17 @@
                     </div>
                 </div>
             </div>
+
+            <!-- End of Instructors -->
+
+            <!-- Rooms -->
+            
             <div class="manage-field">
                 <h1>Manage Rooms</h1>
 
                 <div class="container-wrap">
                     <div class="position position-space-between">
-                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <input type="button" class="btn btn-blue h-100 open-modal" data-modal="modal-create-account" value="New Record" />
                         <div class="material-input">
                             <input type="text" id="search" autocomplete="off" required />
                             <label for="search">
@@ -340,12 +363,17 @@
                     </div>
                 </div>
             </div>
+
+            <!-- End of Rooms -->
+
+            <!-- Accounts -->
+            
             <div class="manage-field">
                 <h1>Manage Accounts</h1>
-
+                
                 <div class="container-wrap">
                     <div class="position position-space-between">
-                        <input type="button" class="btn btn-blue h-100" value="New Record" />
+                        <input type="button" class="btn btn-blue h-100 open-modal" data-modal="modal-create-account" value="New Record" />
                         <div class="material-input">
                             <input type="text" id="search" autocomplete="off" required />
                             <label for="search">
@@ -404,8 +432,125 @@
                     </div>
                 </div>
             </div>
+
+            <!-- End of Accounts -->
         </div>
     </section>
+
+    <div class="modal" id="modal-create-account">
+		<div class="modal-wrapper">
+			<div class="modal-overlay modal-fade"></div>
+			<div class="modal-container modal-fade-in">
+				<div class="modal-header">
+					<h1>Create New Account</h1>
+					<span class="modal-close close-modal">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h2>Personal Information</h2>
+					<div class="modal-divider"></div>
+					
+					<div class="grid grid-2">
+						<div class="form-group-material-blue">
+							<input type="text" class="form-group-material-blue-text" autocomplete="off" required />
+							<label class="form-group-material-blue-label">
+								<span class="form-group-material-blue-span">Firstname</span>
+							</label>
+						</div>
+						<div class="form-group-material-blue">
+							<input type="text" class="form-group-material-blue-text" autocomplete="off" required />
+							<label class="form-group-material-blue-label">
+								<span class="form-group-material-blue-span">Lastname</span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="form-group-material-blue">
+                        <input type="text" class="form-group-material-blue-text" autocomplete="off" required />
+                        <label class="form-group-material-blue-label">
+                            <span class="form-group-material-blue-span">Phone Number</span>
+                        </label>
+                    </div>
+
+					<div class="grid grid-2">
+						<div></div>
+						<div>
+							<p>Sex</p>
+							<div class="flex">
+								<div class="form-radio-group">
+									<input type="radio" name="sex" id="male" checked />
+									<label for="male">
+										<div class="grid grid-auto-1fr">
+											<div class="radio-button"></div>
+											<span class="radio-text">Male</span>
+										</div>
+									</label>
+								</div>
+								
+								<div class="form-radio-group">
+									<input type="radio" name="sex" id="female" />
+									<label for="female">
+										<div class="grid grid-auto-1fr">
+											<div class="radio-button"></div>
+											<span class="radio-text">Female</span>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2>Account Information</h2>
+					<div class="modal-divider"></div>
+					<div class="form-group-material-blue">
+                        <input type="text" class="form-group-material-blue-text" autocomplete="off" required />
+                        <label class="form-group-material-blue-label">
+                            <span class="form-group-material-blue-span">Email Address</span>
+                        </label>
+                    </div>
+					<div class="grid grid-2">
+						<div class="form-group-material-blue">
+							<input type="text" class="form-group-material-blue-text" autocomplete="off" required />
+							<label class="form-group-material-blue-label">
+								<span class="form-group-material-blue-span">Username</span>
+							</label>
+						</div>
+						<div class="form-group-material-blue">
+							<input type="password" class="form-group-material-blue-text" autocomplete="off" required />
+							<label class="form-group-material-blue-label">
+								<span class="form-group-material-blue-span">Password</span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="text-right">
+						<input type="button" class="close-modal modal-button" value="proceed" />
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <!-- START OF NOTIFICATION -->
+
+    <div class="notification">
+		<div class="notification-wrapper">
+			<div class="notification-container notification-fade-in">
+				<div class="notification-header">
+					<span class="notification-close">&times;</span>
+					<div class="notification-header-content">
+						<img src="./../img/ok_filled_100px.png" alt="" />
+						<h2 class="notification-title">Awesome.</h2>
+						<p class="notification-message">You have successfully created an account!</p>
+					</div>
+				</div>
+				<div class="notification-body">
+					<input type="button" class="notification-button" value="okay" />
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <!-- END OF NOTIFICATION -->
 
     <footer class="bg-dark">
         <p>Made by Scheduler &copy; 2019</p>
@@ -416,5 +561,7 @@
             <img class="footer-icon" src="./../img/instagram_new_96px.png" alt="" />
         </div>
     </footer>
+
+    <script src="./../js/modals.js"></script>
 </body>
 </html>
