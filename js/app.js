@@ -67,8 +67,13 @@ interact('.sub').draggable({
       event.target.style.left = pos.x + "px";
     },
     end (event) {
-      event.target.style.top = 0 + "px";
-      event.target.style.left = 0 + "px";
+      pos = {
+        x:0,
+        y:0
+      }
+
+      event.target.style.top = pos.y + "px";
+      event.target.style.left = pos.x + "px";
     }
   }
 });
@@ -79,6 +84,8 @@ interact('.sched-cell').dropzone({
       const dropzone = event.target;
       
       dropzone.innerHTML = null;
+
+      dropzone.style.background = drag.style.background;
       
       while(drag.firstElementChild) {
         dropzone.appendChild(drag.firstElementChild);
