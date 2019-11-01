@@ -16,22 +16,26 @@ initializeGrid(rows, columns);
 
 // Subjects Array
 let subsArray = [
-  {code: "GEC 103", instructor: "Mr. Hermosa", room: "LEC 5"},
-  {code: "GEC 105", instructor: "Mrs. Repalam", room: "LEC 1"}
+  {code: "GEC 103", instructor: "Mr. Hermosa", room: "LEC 5", bg: "#fff"},
+  {code: "GEC 105", instructor: "Mrs. Repalam", room: "LEC 1", bg: "green"}
 ];
 
 // Subject Maker Func
-function createSubject(code, instructor, room) {
+function createSubject(subjectObj) {
   const container = document.createElement('div');
   container.classList.add('subject-container');
   const subject = document.createElement('div');
   subject.classList.add('sub');
-  
-  for (let i = 0; i < arguments.length; i++) {
-    const elem = document.createElement('p');
-    elem.innerText = arguments[i];
-    subject.appendChild(elem);
-    container.appendChild(subject);
+
+  for (const key in subjectObj) {
+    if (key !== "bg") {
+      const elem = document.createElement('p');
+      elem.innerText = subjectObj[key];
+      subject.appendChild(elem);
+      container.appendChild(subject);
+    } else {
+      subject.style.background = subjectObj[key];
+    }
   }
   
   return container;
@@ -39,12 +43,13 @@ function createSubject(code, instructor, room) {
 
 function renderSubjects(subsParent, subsArray) {
   for(let i = 0; i < subsArray.length; i++) {
-    let { code, instructor, room } = subsArray[i];
-    subsParent.appendChild(createSubject(code, instructor, room));
+    subsParent.appendChild(createSubject(subsArray[i]));
   }
 }
 
 renderSubjects(subs, subsArray);
+
+// ---------------------------------------------- No Bugs -------------------------------------------------------------
 
 // INTERACT JS
 // Object holding the positions
