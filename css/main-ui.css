@@ -329,7 +329,6 @@ main {
 
 .sched-cell {
   width: 100%;
-  height: 5rem;
   text-align: center;
   background: #ece7fa;
 }
@@ -337,6 +336,7 @@ main {
 .subject-container {
   max-width: 100%;
   min-width: 10rem;
+  margin-bottom: 1rem;
 }
 
 .sub {
@@ -347,10 +347,16 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  margin-bottom: 1rem;
+  height: 100%;
   text-align: center;
   font-family: 'Muli';
   padding: 1rem .5rem;
+  -ms-touch-action: none;
+      touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .bg-dark-blue {
