@@ -7,7 +7,6 @@ function initializeGrid(row, column) {
   for(let i = 0; i < (column * row); i++) {
     let schedCell = document.createElement("div");
     schedCell.classList.add("sched-cell");
-    schedCell.innerText = i;
     grid.appendChild(schedCell);
   }
 }

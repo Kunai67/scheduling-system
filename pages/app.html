@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Scheduler -- Main Application</title>
 
     <link rel="stylesheet" href="../css/main-ui.css" />
 </head>
@@ -38,36 +38,55 @@
             </div>
         </div>    
     </main> -->
-    <h1>Schedule</h1>
-    <main class="schedule-grid">
-        <div class="grid-container">
-            <div class="days">
-                <p></p>
-                <p>Monday</p>
-                <p>Tuesday</p>
-                <p>Wednesday</p>
-                <p>Thursday</p>
-                <p>Friday</p>
-                <p>Saturday</p>
-                <p>Sunday</p>
+    
+    <main>
+        
+        <div class="schedule-grid">
+            <div class="grid-container table">
+                <!-- <div class="sched-header">
+                    <h2>Schedule for: <span id="section">BSCS 2-B</span></h2>
+                    <p>Adviser: <span id="adviser">Mr. Prince Andres</span></p>
+                </div> -->
+                <div class="days row header">
+                    <i></i>
+                    <p class="cell">Monday</p>
+                    <p class="cell">Tuesday</p>
+                    <p class="cell">Wednesday</p>
+                    <p class="cell">Thursday</p>
+                    <p class="cell">Friday</p>
+                    <p class="cell">Saturday</p>
+                    <p class="cell">Sunday</p>
+                </div>
+                <div class="time">
+                    <p>6:00am - 7:00am</p>
+                    <p>7:00am - 8:00am</p>
+                    <p>8:00am - 9:00am</p>
+                    <p>9:00am - 10:00am</p>
+                    <p>10:00am - 11:00am</p>
+                    <p>11:00am - 12:00pm</p>
+                    <p>12:00pm - 1:00pm</p>
+                    <p>1:00pm - 2:00pm</p>
+                    <p>2:00pm - 3:00pm</p>
+                    <p>3:00pm - 4:00pm</p>
+                    <p>4:00pm- 5:00pm</p>
+                    <p>5:00pm - 6:00pm</p>
+                </div>
+                <div class="sched-grid"></div>
             </div>
-            <div class="time">
-                <p>6:00am - 7:00am</p>
-                <p>7:00am - 8:00am</p>
-                <p>8:00am - 9:00am</p>
-                <p>9:00am - 10:00am</p>
-                <p>10:00am - 11:00am</p>
-                <p>11:00am - 12:00pm</p>
-                <p>12:00pm - 1:00pm</p>
-                <p>1:00pm - 2:00pm</p>
-                <p>2:00pm - 3:00pm</p>
-                <p>3:00pm - 4:00pm</p>
-                <p>4:00pm- 5:00pm</p>
-                <p>5:00pm - 6:00pm</p>
+            <div class="subjects">
+                <h2 class="subject-heading">Subjects</h2>
+
+                <div class="add-new-container">
+                    <h3>Add new subject</h3>
+                    <form action="">
+                        <input type="text" placeholder="Subject Code">
+                        <input type="text" placeholder="Instructor">
+                        <input type="text" placeholder="Room">
+                        <button type="submit" class="btn-border">Add Subject</button>
+                    </form>
+                </div>
             </div>
-            <div class="sched-grid"></div>
         </div>
-        <div class="subjects"></div>
     </main>
 
     <footer class="bg-dark">
