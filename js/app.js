@@ -16,7 +16,7 @@ initializeGrid(rows, columns);
 
 // Subjects Array
 let subsArray = [
-  {code: "GEC 103", instructor: "Mr. Hermosa", room: "LEC 5", bg: "#fff"},
+  {code: "GEC 103", instructor: "Mr. Hermosa", room: "LEC 5", bg: "black"},
   {code: "GEC 105", instructor: "Mrs. Repalam", room: "LEC 1", bg: "green"}
 ];
 
@@ -49,7 +49,7 @@ function renderSubjects(subsParent, subsArray) {
 
 renderSubjects(subs, subsArray);
 
-// ---------------------------------------------- No Bugs -------------------------------------------------------------
+
 
 // INTERACT JS
 // Object holding the positions
@@ -74,46 +74,34 @@ interact('.sub').draggable({
 
       event.target.style.top = pos.y + "px";
       event.target.style.left = pos.x + "px";
-    }
+
+      if (event.target.parentNode.classList.contains("subject-container")) {
+        event.target.parentNode.replaceChild(event.target.cloneNode(true), event.target);
+      }
+    },
   }
 });
 
 interact('.sched-cell').dropzone({
-    ondrop: function (event) {
-      const drag = event.relatedTarget.cloneNode(true);
+  listeners: {
+    drop (event) {
+      const drag = event.relatedTarget;
       const dropzone = event.target;
       
       dropzone.innerHTML = null;
-
-      dropzone.style.background = drag.style.background;
+      dropzone.removeAttribute('style');
       
-      while(drag.firstElementChild) {
-        dropzone.appendChild(drag.firstElementChild);
-      }
-      
-      addXButton(dropzone);
+      dropzone.appendChild(drag);
       
       pos = {
         x:0,
         y:0
       }
-    },
+    }
+  }
  })
 
-function createClone(elem) {
-  let elemClone = elem.cloneNode(true);
-  subs.appendChild(elemClone);
-}
-
-function addXButton(elem) {
-   const btn = document.createElement("button");
-   btn.innerText = "X";
-   btn.addEventListener("click", function(e) {
-     e.target.parentNode.innerHTML = null;
-     e.stopPropagation();
-   });
-  elem.appendChild(btn);
-}
+// ---------------------------------------------- REFACTORED ------------------------------------------------------------
 
 //CREATE SCHEDULE
 let day = document.querySelector(".days");
@@ -125,18 +113,21 @@ function createSchedule(grid) {
   let schedule = [];
 
   for(let i = 0; i < elemArr.length; i++) {
-    let detailArr = elemArr[i].children;
-    if (detailArr.length > 0) {
-       let scheduleCellObj = {
-         code: detailArr[0].innerText,
-         instructor: detailArr[1].innerText,
-         room: detailArr[2].innerText,
-         day: day.children[(i % 7) + 1].innerText,
-         time: time.children[Math.floor(i / 7)].innerText
-       };
-      schedule.push(scheduleCellObj);
+    if (elemArr[i].firstElementChild) {
+      let detailArr = elemArr[i].firstElementChild.children;
+      if (detailArr.length > 0) {
+        let scheduleCellObj = {
+          code: detailArr[0].innerText,
+          instructor: detailArr[1].innerText,
+          room: detailArr[2].innerText,
+          bg: elemArr[i].firstElementChild.style.background,
+          day: day.children[(i % 7) + 1].innerText,
+          time: time.children[Math.floor(i / 7)].innerText
+        };
+       schedule.push(scheduleCellObj);
+     }
     }
   }
-  
+
   console.log(schedule);
 }
