@@ -4,7 +4,7 @@ const rows = 7;
 const columns = 12;
 
 function initializeGrid(row, column) {
-  for(let i = 0; i < (column * row); i++) {
+  for (let i = 0; i < (column * row); i++) {
     let schedCell = document.createElement("div");
     schedCell.classList.add("sched-cell");
     grid.appendChild(schedCell);
@@ -15,9 +15,18 @@ function initializeGrid(row, column) {
 initializeGrid(rows, columns);
 
 // Subjects Array
-let subsArray = [
-  {code: "GEC 103", instructor: "Mr. Hermosa", room: "LEC 5", bg: "black"},
-  {code: "GEC 105", instructor: "Mrs. Repalam", room: "LEC 1", bg: "green"}
+let subsArray = [{
+    code: "GEC 103",
+    instructor: "Mr. Hermosa",
+    room: "LEC 5",
+    bg: "black"
+  },
+  {
+    code: "GEC 105",
+    instructor: "Mrs. Repalam",
+    room: "LEC 1",
+    bg: "green"
+  }
 ];
 
 // Subject Maker Func
@@ -37,12 +46,12 @@ function createSubject(subjectObj) {
       subject.style.background = subjectObj[key];
     }
   }
-  
+
   return container;
 }
 
 function renderSubjects(subsParent, subsArray) {
-  for(let i = 0; i < subsArray.length; i++) {
+  for (let i = 0; i < subsArray.length; i++) {
     subsParent.appendChild(createSubject(subsArray[i]));
   }
 }
@@ -53,23 +62,23 @@ renderSubjects(subs, subsArray);
 
 // INTERACT JS
 // Object holding the positions
-let pos  = {
+let pos = {
   x: 0,
   y: 0
 }
 
 interact('.sub').draggable({
   listeners: {
-    move (event) {
+    move(event) {
       pos.x += event.dx;
       pos.y += event.dy;
       event.target.style.top = pos.y + "px";
       event.target.style.left = pos.x + "px";
     },
-    end (event) {
+    end(event) {
       pos = {
-        x:0,
-        y:0
+        x: 0,
+        y: 0
       }
 
       event.target.style.top = pos.y + "px";
@@ -84,22 +93,22 @@ interact('.sub').draggable({
 
 interact('.sched-cell').dropzone({
   listeners: {
-    drop (event) {
+    drop(event) {
       const drag = event.relatedTarget;
       const dropzone = event.target;
-      
+
       dropzone.innerHTML = null;
       dropzone.removeAttribute('style');
-      
+
       dropzone.appendChild(drag);
-      
+
       pos = {
-        x:0,
-        y:0
+        x: 0,
+        y: 0
       }
     }
   }
- })
+})
 
 // ---------------------------------------------- REFACTORED ------------------------------------------------------------
 
@@ -109,10 +118,10 @@ let time = document.querySelector(".time");
 
 function createSchedule(grid) {
   let elemArr = Array.from(grid.children);
-  
+
   let schedule = [];
 
-  for(let i = 0; i < elemArr.length; i++) {
+  for (let i = 0; i < elemArr.length; i++) {
     if (elemArr[i].firstElementChild) {
       let detailArr = elemArr[i].firstElementChild.children;
       if (detailArr.length > 0) {
@@ -124,10 +133,23 @@ function createSchedule(grid) {
           day: day.children[(i % 7) + 1].innerText,
           time: time.children[Math.floor(i / 7)].innerText
         };
-       schedule.push(scheduleCellObj);
-     }
+        schedule.push(scheduleCellObj);
+      }
     }
   }
 
   console.log(schedule);
+}
+
+const addSubBtn = document.getElementById("addSubBtn");
+
+function addSubject() {
+  const inputArr = Array.from(document.querySelectorAll(".form-group-material-blue-text"));
+  let subject = {};
+  for (let i = 0; i < inputArr.length; i++) {
+    subject[inputArr[i].getAttribute('id')] = inputArr[i].value;
+    inputArr[i].value = null;
+  }
+
+  subs.appendChild(createSubject(subject));
 }
