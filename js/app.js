@@ -30,9 +30,7 @@ let subsArray = [{
 ];
 
 // Subject Maker Func
-function createSubject(subjectObj) {
-  const container = document.createElement('div');
-  container.classList.add('subject-container');
+function createSubject(subjectObj, hasContainer = true) {
   const subject = document.createElement('div');
   subject.classList.add('sub');
 
@@ -41,13 +39,20 @@ function createSubject(subjectObj) {
       const elem = document.createElement('p');
       elem.innerText = subjectObj[key];
       subject.appendChild(elem);
-      container.appendChild(subject);
+      
     } else {
       subject.style.background = subjectObj[key];
     }
   }
 
-  return container;
+  if (hasContainer) {
+    const container = document.createElement('div');
+    container.classList.add('subject-container');
+    container.appendChild(subject);
+    return container;
+  } else {
+    return subject;
+  }
 }
 
 function renderSubjects(subsParent, subsArray) {
@@ -113,9 +118,6 @@ interact('.sched-cell').dropzone({
 // ---------------------------------------------- REFACTORED ------------------------------------------------------------
 
 //CREATE SCHEDULE
-let day = document.querySelector(".days");
-let time = document.querySelector(".time");
-
 function createSchedule(grid) {
   let elemArr = Array.from(grid.children);
 
@@ -130,8 +132,8 @@ function createSchedule(grid) {
           instructor: detailArr[1].innerText,
           room: detailArr[2].innerText,
           bg: elemArr[i].firstElementChild.style.background,
-          day: day.children[(i % 7) + 1].innerText,
-          time: time.children[Math.floor(i / 7)].innerText
+          day: (i % 7),
+          time: Math.floor(i / 7)
         };
         schedule.push(scheduleCellObj);
       }
@@ -152,4 +154,22 @@ function addSubject() {
   }
 
   subs.appendChild(createSubject(subject));
+}
+
+// Schedule Loading
+// DAYS = 0 - 6
+// TIME = 0 - 12 (?)
+
+function loadSchedule(scheduleArr) {
+  scheduleArr.forEach(obj => {
+    let index = obj.day + (obj.time * 7);
+    let { code, instructor, room, bg } = obj;
+    let croppedSub = {
+      code,
+      instructor,
+      room,
+      bg
+    }
+    grid.children[index].appendChild(createSubject(croppedSub, false));
+  });
 }
